@@ -42,7 +42,7 @@ Use for multi-step research, list building, enrichment, or repeatable structured
 
 Anonymous hosted access is rate-limited. Use OAuth or a client-managed `x-api-key` or bearer header for higher limits and authenticated tools. Although some official clients support URL-carried credentials, this skill forbids them because URLs leak through logs, histories, diagnostics, and repository configuration.
 
-Masked output from `codex mcp get exa` confirms a configured header, not a valid key. Confirm health with a small read-only search or fetch.
+An MCP inventory entry with a masked header confirms configuration, not a valid key. Confirm health with a small read-only search or fetch.
 
 ## Failure and evidence notes
 
