@@ -19,13 +19,11 @@ Use this file to refresh the skill without turning a transient machine snapshot 
 
 ## Refresh procedure
 
-1. Run `scripts/doctor.sh` and keep its redacted output only as working evidence.
-2. Inspect the current agent tool registry. Registration, authentication, exposure, and health are separate checks.
-3. Use each healthy provider to find its own official documentation and repository.
-4. Cross-fetch the Exa documentation with Firecrawl and the Firecrawl documentation with Exa when both are healthy.
-5. Compare the live tool schemas with the provider references. Update routing, auth, freshness, and side-effect boundaries rather than copying the entire schema.
-6. Run small read-only smoke calls for discovery and known-page retrieval.
-7. Run `scripts/check.sh --runtime` and inspect the diff for secrets before committing.
+1. Inspect the current agent tool registry. Registration, authentication, exposure, and health are separate checks.
+2. Use each healthy provider to find its own official documentation and repository.
+3. Cross-fetch the Exa documentation with Firecrawl and the Firecrawl documentation with Exa when both are healthy.
+4. Compare the live tool schemas with the provider references. Update routing, auth, freshness, and side-effect boundaries rather than copying the entire schema.
+5. Run small read-only smoke calls for discovery and known-page retrieval.
 
 Do not commit raw result payloads, dynamic scrape or run IDs, account metadata, headers, tokens, cookies, private URLs, or fixed statements about one machine's current health. Store durable official URLs and procedures; generate volatile status at runtime.
 

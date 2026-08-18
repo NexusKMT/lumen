@@ -16,7 +16,7 @@ Distinguish four states before diagnosing or describing the search stack:
 3. **Exposed**: the current agent tool registry includes the expected tool name and schema.
 4. **Healthy**: a bounded, read-only call succeeds now.
 
-One state does not imply the next. Run `scripts/doctor.sh` for a redacted registration snapshot when setup, auth, missing tools, or provider availability matters. Inspect the current tool schema before calling it; server capabilities change faster than this skill.
+One state does not imply the next. When setup, auth, missing tools, or provider availability matters, inspect the live registry and make a bounded read-only call. Inspect the current tool schema before calling it; server capabilities change faster than this skill.
 
 Read the relevant provider reference before use:
 
@@ -87,4 +87,4 @@ Do not modify MCP registration or authentication while performing ordinary resea
 
 ## Maintain the skill
 
-Run `scripts/check.sh` after edits. Run `scripts/check.sh --runtime` when the local Codex installation is available. Use `scripts/bootstrap.sh` to install or fast-forward this private repository without silently replacing a non-Git skill directory.
+When updating this repository, compare provider references with current official documentation, run the external `skill-creator` validator when available, and inspect the diff for stale provider references, credentials, and unsupported tool names. Install a fresh copy by cloning this repository into the desired Skill directory.
