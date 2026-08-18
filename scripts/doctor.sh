@@ -8,7 +8,7 @@ redact() {
     -e 's/([?&](exaApiKey|apiKey|api_key|token)=)[^&[:space:]]+/\1<redacted>/g'
 }
 
-printf 'Search MCP runtime doctor\n'
+printf 'Lumen runtime doctor\n'
 printf 'checked_at: %s\n' "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 
 if ! command -v codex >/dev/null 2>&1; then

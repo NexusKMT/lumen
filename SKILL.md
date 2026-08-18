@@ -1,9 +1,9 @@
 ---
-name: search-mcps
-description: Discover, fetch, verify, and cite current web evidence with installed Exa and Firecrawl MCP tools. Use for web research, documentation lookup, current-fact verification, URL extraction, page or file parsing, developer-source search, literature research, site mapping or crawling, provider selection, search-MCP diagnosis, and maintenance of the local search stack. Inventory runtime registration, authentication, exposed tools, and call health instead of trusting a dated snapshot.
+name: lumen
+description: Discover, retrieve, verify, and cite current web evidence through available retrieval tools such as Exa and Firecrawl. Use for web research, documentation lookup, current-fact verification, URL, page, or file extraction, developer-source search, literature research, site discovery or crawling, provider selection, retrieval-stack diagnosis, and maintenance. Inventory runtime registration, authentication, exposed tools, and call health instead of trusting a dated snapshot.
 ---
 
-# Search MCPs
+# Lumen
 
 Use the smallest available tool that can produce inspectable source evidence. Treat bundled provider notes as routing guidance, not proof of current installation or service health.
 

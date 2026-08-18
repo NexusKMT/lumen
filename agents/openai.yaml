@@ -1,7 +1,7 @@
 interface:
-  display_name: "Search MCPs"
-  short_description: "Route and verify web research with Exa and Firecrawl"
-  default_prompt: "Use $search-mcps to choose a healthy search provider, retrieve primary sources, and report verified evidence transparently."
+  display_name: "Lumen"
+  short_description: "Illuminate and verify current web evidence"
+  default_prompt: "Use $lumen to discover authoritative sources, retrieve primary evidence, and verify material claims transparently."
 dependencies:
   tools:
     - type: "mcp"

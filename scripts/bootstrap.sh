@@ -3,10 +3,10 @@ set -euo pipefail
 
 script_dir="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source_root="$(CDPATH= cd -- "$script_dir/.." && pwd)"
-repo_slug="${SEARCH_MCPS_REPO:-NexusKMT/search-mcps}"
-repo_url="${SEARCH_MCPS_URL:-https://github.com/${repo_slug}.git}"
+repo_slug="${LUMEN_REPO:-NexusKMT/lumen}"
+repo_url="${LUMEN_URL:-https://github.com/${repo_slug}.git}"
 codex_root="${CODEX_HOME:-$HOME/.codex}"
-destination="${1:-$codex_root/skills/search-mcps}"
+destination="${1:-$codex_root/skills/lumen}"
 
 if [[ "$destination" == "$source_root" ]]; then
   "$source_root/scripts/check.sh"
@@ -52,8 +52,8 @@ trap cleanup EXIT HUP INT TERM
 
 # The staging directory is created beside the destination so a successful first install
 # can be moved onto the same volume without depending on /tmp or a cross-volume rename.
-stage_root="$(mktemp -d "${destination_parent}/.search-mcps.XXXXXXXX")"
-clone_target="$stage_root/search-mcps"
+stage_root="$(mktemp -d "${destination_parent}/.lumen.XXXXXXXX")"
+clone_target="$stage_root/lumen"
 
 if command -v gh >/dev/null 2>&1 && gh auth status >/dev/null 2>&1; then
   gh repo clone "$repo_slug" "$clone_target" -- --depth 1

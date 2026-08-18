@@ -5,7 +5,7 @@ script_dir="$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 skill_root="$(CDPATH= cd -- "$script_dir/.." && pwd)"
 runtime=0
 failures=0
-check_tmp="$(mktemp -d -t search-mcps-check)"
+check_tmp="$(mktemp -d -t lumen-check)"
 dropped_provider='ji''na'
 cleanup() {
   if [[ -n "$check_tmp" && -d "$check_tmp" ]]; then
@@ -41,7 +41,7 @@ if [[ -f "$skill_root/SKILL.md" ]]; then
     printf 'SKILL.md: missing YAML frontmatter start\n' >&2
     failures=$((failures + 1))
   fi
-  if ! rg -q '^name:[[:space:]]+search-mcps[[:space:]]*$' "$skill_root/SKILL.md"; then
+  if ! rg -q '^name:[[:space:]]+lumen[[:space:]]*$' "$skill_root/SKILL.md"; then
     printf 'SKILL.md: invalid name\n' >&2
     failures=$((failures + 1))
   fi
