@@ -7,7 +7,7 @@ description: Discover, retrieve, verify, and cite current web evidence through t
 
 Use the smallest available capability that can produce inspectable source evidence. The workflow in this file is portable; provider references are routing guidance, not proof of current installation or service health.
 
-The portable contract is this file and its `references/` documents. `agents/openai.yaml` is optional client metadata. Hosts that do not consume it should load this file and configure MCP servers through their own native settings.
+The portable contract is this file and its `references/` documents. Hosts configure MCP servers through their own native settings.
 
 This skill requires an MCP-capable host with at least one configured retrieval capability. The host manages provider authentication and tool registration.
 
