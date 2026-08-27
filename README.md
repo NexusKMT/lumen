@@ -1,6 +1,6 @@
-Install this Agent Skills-compatible skill by cloning it into the skills directory documented by your coding agent:
+Install Lumen into the shared user skills directory:
 
 ```bash
-AGENT_SKILLS_DIR="$HOME/.agents/skills"  # replace with your host's documented skills directory
-git clone https://github.com/NexusKMT/lumen.git "$AGENT_SKILLS_DIR/lumen"
+mkdir -p "$HOME/.agents/skills"
+git clone https://github.com/NexusKMT/lumen.git "$HOME/.agents/skills/lumen"
 ```
